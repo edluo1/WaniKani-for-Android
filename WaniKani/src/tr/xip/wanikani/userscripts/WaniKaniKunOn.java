@@ -40,7 +40,8 @@ public class WaniKaniKunOn {
                             "if(questionType == \"reading\" && \"kan\" in curItem) {" +
                             "var readingType = \"Reading\";" +
                             "if(curItem.emph == \"onyomi\") readingType = \"On'yomi\";" +
-                            "else readingType = \"Kun'yomi\";" +
+                            "else if (curItem.emph == \"kunyomi\")readingType = \"Kun'yomi\";" +
+                            "else if (curItem.emph == \"nanori\")readingType = \"Nanori\";" +
                             "$('#question-type').html('<h1>Kanji <strong>' + readingType + '</strong></h1>');" +
                             "}" +
                     "}" +
